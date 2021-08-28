@@ -11,10 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Covid19Tracking">
         <activity
-            android:name=".TrackingActivity"
+            android:name=".ui.TrackingActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:screenOrientation="fullSensor"
             android:exported="true">
             <intent-filter>
