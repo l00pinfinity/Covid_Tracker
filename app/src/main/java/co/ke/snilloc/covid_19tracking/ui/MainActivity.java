@@ -1,10 +1,12 @@
-package co.ke.snilloc.covid_19tracking;
+package co.ke.snilloc.covid_19tracking.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import co.ke.snilloc.covid_19tracking.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(MainActivity.this,TrackingActivity.class));
+                startActivity(new Intent(MainActivity.this, TrackingActivity.class));
                 //destroy the activity
                 finish();
             }
