@@ -26,9 +26,9 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    buildTypes.each{
-        it.buildConfigField 'String','COVID_TRACKER_API_KEY',CovidTrackerApiKey
-
+    buildTypes.each {
+        it.buildConfigField 'String', 'COVID_TRACKER_API_KEY', CovidTrackerApiKey
+    }
 }
 
 dependencies {
