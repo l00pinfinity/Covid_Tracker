@@ -1,4 +1,4 @@
-package co.ke.snilloc.covid_19tracking;
+package co.ke.snilloc.covid_19tracking.ui;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,13 +15,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
+import co.ke.snilloc.covid_19tracking.R;
 import co.ke.snilloc.covid_19tracking.adapter.TrackerAdapter;
 import co.ke.snilloc.covid_19tracking.models.Tracker;
 import co.ke.snilloc.covid_19tracking.network.CovidTrackerClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
 
 public class WorldActivity extends AppCompatActivity {
     @BindView(R.id.WorldProgressBar) ProgressBar mWorldProgressBar;
@@ -34,12 +35,14 @@ public class WorldActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_world);
+        ButterKnife.bind(this);
 
         layoutManager = new LinearLayoutManager(this);
         mWorldRecyclerView.setLayoutManager(layoutManager);
         adapter = new TrackerAdapter(trackerList);
         mWorldRecyclerView.setAdapter(adapter);
 
+        mWorldProgressBar.setVisibility(View.VISIBLE);
         fetchData();
 
     }
