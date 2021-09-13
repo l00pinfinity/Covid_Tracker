@@ -5,7 +5,9 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="8dp"
-    app:cardCornerRadius="3dp">
+    app:cardCornerRadius="6dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -24,12 +26,22 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/LastUpdate"
+            android:id="@+id/MyTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/CountryText"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Updated:" />
+
+        <TextView
+            android:id="@+id/LastUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/CountryText"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/MyTextView"
             android:text="Last update" />
 
         <TextView
@@ -38,11 +50,26 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/LastUpdate"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:text="Total Cases"
             android:textColor="#000"
             android:textSize="40dp"
             android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Cases"
+            android:layout_below="@+id/TotalCases"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Active Cases"
+            android:layout_below="@+id/CountryText"
+            android:layout_marginEnd="20dp"/>
 
         <TextView
             android:id="@+id/ActiveCases"
@@ -50,10 +77,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/CountryText"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
-            android:textColor="#008000"
-            android:text="Active Cases" />
+            android:text="Active Cases"
+            android:textColor="#008000" />
 
         <TextView
             android:id="@+id/TotalDeaths"
@@ -61,11 +88,18 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/TotalRecovered"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="50dp"
             android:text="Total Deaths"
             android:textColor="#000"
             android:textSize="40sp"
             android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TotalDeaths"
+            android:layout_marginStart="20dp"
+            android:text="Total Deaths" />
 
         <TextView
             android:id="@+id/NewCases"
@@ -76,7 +110,16 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="40dp"
             android:text="New Cases"
-            android:textColor="#ffa500"/>
+            android:textColor="#ffa500" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/NewCases"
+            android:layout_marginStart="10dp"
+            android:text="INFECTED"
+            android:textSize="10sp"/>
+
 
         <TextView
             android:id="@+id/TotalRecovered"
@@ -91,6 +134,14 @@
             android:textColor="#008000" />
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RECOVERED"
+            android:textSize="10sp"
+            android:layout_below="@+id/TotalRecovered"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
             android:id="@+id/NewDeaths"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -98,10 +149,17 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="40dp"
             android:layout_marginEnd="10dp"
-            android:textColor="#FF0000"
-            android:text="New Deaths" />
+            android:text="New Deaths"
+            android:textColor="#FF0000" />
 
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/NewDeaths"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:text="DEATHS"
+            android:textSize="10sp" />
 
     </RelativeLayout>
 
