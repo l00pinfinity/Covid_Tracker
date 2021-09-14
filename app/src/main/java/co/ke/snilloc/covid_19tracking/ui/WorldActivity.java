@@ -25,7 +25,9 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class WorldActivity extends AppCompatActivity {
+    @SuppressLint("NonConstantResourceId")
     @BindView(R.id.WorldProgressBar) ProgressBar mWorldProgressBar;
+    @SuppressLint("NonConstantResourceId")
     @BindView(R.id.WorldRecyclerView) RecyclerView mWorldRecyclerView;
     LinearLayoutManager layoutManager;
     TrackerAdapter adapter;

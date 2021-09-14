@@ -39,15 +39,17 @@
                 android:id="@+id/GlobalCases"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TotalCases"
-                android:textSize="40dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/totalcases"
+                android:textSize="40sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/GlobalCases"
-                android:text="Global cases"
+                android:text="@string/global_cases"
+                android:layout_marginStart="10dp"
                 android:textSize="24sp" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
@@ -59,7 +61,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:text="See All Stats"
+        android:text="@string/see_all_stats"
         android:textAllCaps="false"
         android:textSize="16sp" />
 

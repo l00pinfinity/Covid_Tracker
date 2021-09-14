@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Covid-19 Tracking</string>
+    <string name="totalcases">TotalCases</string>
+    <string name="global_cases">Global Cases</string>
+    <string name="see_all_stats">See All Stats</string>
+    <string name="todo">TODO</string>
+    <string name="country">Country</string>
+    <string name="updated">Updated:</string>
+    <string name="last_update">Last update</string>
+    <string name="total_cases">Total Cases</string>
+    <string name="active_cases">Active Cases</string>
+    <string name="total_deaths">Total Deaths</string>
+    <string name="infected">INFECTED</string>
+    <string name="new_cases">New Cases</string>
+    <string name="total_recovered">Total Recovered</string>
+    <string name="recovered">RECOVERED</string>
+    <string name="new_deaths">New Deaths</string>
+    <string name="deaths">DEATHS</string>
 </resources>

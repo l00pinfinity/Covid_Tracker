@@ -1,6 +1,5 @@
 package co.ke.snilloc.covid_19tracking.adapter;
 
-import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,14 +10,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import co.ke.snilloc.covid_19tracking.R;
 import co.ke.snilloc.covid_19tracking.models.Tracker;
 
 public class TrackerAdapter extends RecyclerView.Adapter<TrackerAdapter.ViewHolder> {
 
-    private List<Tracker> trackerList;
+    private final List<Tracker> trackerList;
 
     public TrackerAdapter(List<Tracker> trackerList) {
         this.trackerList = trackerList;
@@ -49,7 +46,7 @@ public class TrackerAdapter extends RecyclerView.Adapter<TrackerAdapter.ViewHold
         return trackerList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
 
         //initialize our textview
         TextView mCountryText;
