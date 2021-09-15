@@ -12,5 +12,6 @@
 /captures
 .externalNativeBuild
 .cxx
-gradle.properties
 local.properties
+gradle.properties
+debug.log
