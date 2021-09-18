@@ -29,7 +29,9 @@ public class AppOpenManager implements LifecycleObserver, Application.ActivityLi
     private Activity currentActivity;
 
     private static final String LOG_TAG = "AppOpenManager";
-    private static final String AD_UNIT_ID = "ca-app-pub-3940256099942544/3419835294";
+    //for test
+    //private static final String AD_UNIT_ID = "ca-app-pub-3940256099942544/3419835294";
+    private static final String AD_UNIT_ID = "ca-app-pub-7625973824193879/9632801767";
     private AppOpenAd appOpenAd = null;
 
     private final MyApplication myApplication;

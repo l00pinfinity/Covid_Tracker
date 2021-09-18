@@ -29,7 +29,7 @@
             </intent-filter>
         </activity>
 
-        <!--ca-app-pub-7625973824193879~8888101278-->
+        <!--ca-app-pub-7625973824193879~9982966189-->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3940256099942544~3347511713"/>

@@ -66,7 +66,7 @@
         android:textAllCaps="false"
         android:textSize="16sp" />
 
-<!--    ca-app-pub-7625973824193879/1217935755-->
+<!--   ca-app-pub-3940256099942544/6300978111-->
     <com.google.android.gms.ads.AdView
         xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adView"
@@ -76,9 +76,7 @@
         android:layout_below="@+id/SearchView"
         android:layout_marginTop="20dp"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+        ads:adUnitId="ca-app-pub-7625973824193879/6817553278">
     </com.google.android.gms.ads.AdView>
-
-<!--    ca-app-pub-7625973824193879/7260599923-->
 
 </RelativeLayout>
