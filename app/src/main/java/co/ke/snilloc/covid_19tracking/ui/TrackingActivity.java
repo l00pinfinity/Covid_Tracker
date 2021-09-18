@@ -6,7 +6,17 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,11 +33,58 @@ public class TrackingActivity extends AppCompatActivity {
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.GlobalCases) TextView mGlobalCases;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tracking);
         ButterKnife.bind(this);
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(@NonNull InitializationStatus initializationStatus) {
+            }
+        });
+
+        AdView mAdView = new AdView(this);
+
+        mAdView.setAdSize(AdSize.BANNER);
+
+        mAdView.setAdUnitId("ca-app-pub-3940256099942544/6300978111");
+// TODO: Add adView to your view hierarchy.
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+        mAdView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                // Code to be executed when an ad finishes loading.
+            }
+
+            @Override
+            public void onAdFailedToLoad(@NonNull LoadAdError adError) {
+                // Code to be executed when an ad request fails.
+            }
+
+            @Override
+            public void onAdOpened() {
+                // Code to be executed when an ad opens an overlay that
+                // covers the screen.
+            }
+
+            @Override
+            public void onAdClicked() {
+                // Code to be executed when the user clicks on an ad.
+            }
+
+            @Override
+            public void onAdClosed() {
+                // Code to be executed when the user is about to return
+                // to the app after tapping on an ad.
+            }
+        });
 
         fetchWorldData();
         mSeeAllButton.setOnClickListener(v -> {
@@ -40,7 +97,7 @@ public class TrackingActivity extends AppCompatActivity {
     private void fetchWorldData() {
         CovidTrackerClient.getClient().getWorldCovidData().enqueue(new Callback<Tracker>() {
             @Override
-            public void onResponse(Call<Tracker> call, Response<Tracker> response) {
+            public void onResponse(@NonNull Call<Tracker> call, @NonNull Response<Tracker> response) {
                 if (response.isSuccessful()){
                     assert response.body() != null;
                     mGlobalCases.setText(response.body().getTotalCasesText());
@@ -48,7 +105,7 @@ public class TrackingActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<Tracker> call, Throwable t) {
+            public void onFailure(@NonNull Call<Tracker> call, @NonNull Throwable t) {
             }
         });
     }

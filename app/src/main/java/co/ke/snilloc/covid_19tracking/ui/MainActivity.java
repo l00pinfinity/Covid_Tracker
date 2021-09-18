@@ -16,14 +16,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //delay the splash screen a bit
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                startActivity(new Intent(MainActivity.this, TrackingActivity.class));
-                //destroy the activity
-                finish();
-            }
-            //for how long?
+        //for how long?
+        new Handler().postDelayed(() -> {
+            startActivity(new Intent(MainActivity.this, TrackingActivity.class));
+            //destroy the activity
+            finish();
         },5000);
     }
 }
