@@ -3,8 +3,11 @@ package co.ke.snilloc.covid_19tracking.ui;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,7 +35,8 @@ public class TrackingActivity extends AppCompatActivity {
     @BindView(R.id.SeeAllButton) Button mSeeAllButton;
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.GlobalCases) TextView mGlobalCases;
-
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.TrackingProgressBar) ProgressBar mTrackingProgressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,7 +96,11 @@ public class TrackingActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        //show progressbar
+        mTrackingProgressBar.setVisibility(View.VISIBLE);
+
     }
+
 
     private void fetchWorldData() {
         CovidTrackerClient.getClient().getWorldCovidData().enqueue(new Callback<Tracker>() {
@@ -100,12 +108,17 @@ public class TrackingActivity extends AppCompatActivity {
             public void onResponse(@NonNull Call<Tracker> call, @NonNull Response<Tracker> response) {
                 if (response.isSuccessful()){
                     assert response.body() != null;
+                    //hide progress bar
+                    mTrackingProgressBar.setVisibility(View.GONE);
                     mGlobalCases.setText(response.body().getTotalCasesText());
                 }
             }
 
             @Override
             public void onFailure(@NonNull Call<Tracker> call, @NonNull Throwable t) {
+                Toast.makeText(TrackingActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
+                //stop progress bar
+                mTrackingProgressBar.setVisibility(View.GONE);
             }
         });
     }

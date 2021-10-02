@@ -52,6 +52,17 @@
                 android:text="@string/global_cases"
                 android:layout_marginStart="10dp"
                 android:textSize="24sp" />
+
+            <ProgressBar
+                android:id="@+id/TrackingProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/progressbar"
+                android:progress="0"
+                android:layout_toEndOf="@+id/GlobalCases"
+                android:layout_marginStart="80dp"
+                android:visibility="gone"/>
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
