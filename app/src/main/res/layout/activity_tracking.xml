@@ -41,28 +41,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="@string/totalcases"
+                android:text=""
                 android:textSize="40sp"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/textView22"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/GlobalCases"
-                android:text="@string/global_cases"
                 android:layout_marginStart="10dp"
+                android:text="@string/global_cases"
                 android:textSize="24sp" />
 
             <ProgressBar
                 android:id="@+id/TrackingProgressBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:indeterminate="true"
                 android:indeterminateDrawable="@drawable/progressbar"
                 android:progress="0"
-                android:layout_toEndOf="@+id/GlobalCases"
-                android:layout_marginStart="80dp"
-                android:visibility="gone"/>
+                android:visibility="visible" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 

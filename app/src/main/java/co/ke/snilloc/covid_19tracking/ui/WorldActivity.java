@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -65,7 +66,12 @@ public class WorldActivity extends AppCompatActivity {
             public void onFailure(@NonNull Call<List<Tracker>> call, @NonNull Throwable t) {
                 mWorldProgressBar.setVisibility(View.GONE);
                 Toast.makeText(WorldActivity.this, "Something went wrong: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+                openTrackActivity();
             }
         });
+    }
+
+    private void openTrackActivity() {
+        startActivity(new Intent(WorldActivity.this,TrackingActivity.class));
     }
 }
