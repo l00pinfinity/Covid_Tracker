@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/l00p/AndroidStudioProjects/Covid_Tracker/app/src/main/res/layout/activity_tracking.xml" value="0.22" />
+        <entry key="..\:/Users/l00p/AndroidStudioProjects/Covid_Tracker/app/src/main/res/layout/activity_world.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/l00p/AndroidStudioProjects/Covid_Tracker/app/src/main/res/menu/search_menu.xml" value="0.22447916666666667" />
         <entry key="app/src/main/res/drawable/progressbar.xml" value="0.209375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/activity_tracking.xml" value="0.19322916666666667" />
