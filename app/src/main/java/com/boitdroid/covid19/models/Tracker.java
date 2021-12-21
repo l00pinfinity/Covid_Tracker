@@ -1,5 +1,5 @@
 
-package co.ke.snilloc.covid_19tracking.models;
+package com.boitdroid.covid19.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

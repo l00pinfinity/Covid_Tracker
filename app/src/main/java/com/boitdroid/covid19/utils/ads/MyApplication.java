@@ -1,7 +1,8 @@
-package co.ke.snilloc.covid_19tracking;
+package com.boitdroid.covid19.utils.ads;
 
 import android.app.Application;
 
+import com.boitdroid.covid19.utils.ads.AppOpenManager;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;

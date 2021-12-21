@@ -1,6 +1,6 @@
-package co.ke.snilloc.covid_19tracking.network;
+package com.boitdroid.covid19.network;
 
-import co.ke.snilloc.covid_19tracking.Constants;
+import com.boitdroid.covid19.utils.Constants;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import retrofit2.Retrofit;

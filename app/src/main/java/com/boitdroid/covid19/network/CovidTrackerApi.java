@@ -1,8 +1,8 @@
-package co.ke.snilloc.covid_19tracking.network;
+package com.boitdroid.covid19.network;
 
 import java.util.List;
 
-import co.ke.snilloc.covid_19tracking.models.Tracker;
+import com.boitdroid.covid19.models.Tracker;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;

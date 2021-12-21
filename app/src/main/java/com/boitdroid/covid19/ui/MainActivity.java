@@ -1,4 +1,4 @@
-package co.ke.snilloc.covid_19tracking.ui;
+package com.boitdroid.covid19.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import co.ke.snilloc.covid_19tracking.R;
+import com.boitdroid.covid19.R;
 
 public class MainActivity extends AppCompatActivity {
 

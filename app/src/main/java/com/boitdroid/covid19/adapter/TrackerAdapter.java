@@ -1,4 +1,4 @@
-package co.ke.snilloc.covid_19tracking.adapter;
+package com.boitdroid.covid19.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import co.ke.snilloc.covid_19tracking.R;
-import co.ke.snilloc.covid_19tracking.models.Tracker;
+import com.boitdroid.covid19.R;
+import com.boitdroid.covid19.models.Tracker;
 
 public class TrackerAdapter extends RecyclerView.Adapter<TrackerAdapter.ViewHolder> {
 

@@ -1,4 +1,4 @@
-package co.ke.snilloc.covid_19tracking.ui;
+package com.boitdroid.covid19.ui;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -23,9 +23,9 @@ import com.google.android.gms.ads.initialization.OnInitializationCompleteListene
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import co.ke.snilloc.covid_19tracking.R;
-import co.ke.snilloc.covid_19tracking.models.Tracker;
-import co.ke.snilloc.covid_19tracking.network.CovidTrackerClient;
+import com.boitdroid.covid19.R;
+import com.boitdroid.covid19.models.Tracker;
+import com.boitdroid.covid19.network.CovidTrackerClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

@@ -1,4 +1,4 @@
-package co.ke.snilloc.covid_19tracking;
+package com.boitdroid.covid19.utils.ads;
 
 import static androidx.lifecycle.Lifecycle.Event.ON_START;
 

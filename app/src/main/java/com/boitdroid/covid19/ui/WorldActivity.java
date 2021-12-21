@@ -1,4 +1,4 @@
-package co.ke.snilloc.covid_19tracking.ui;
+package com.boitdroid.covid19.ui;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,10 +17,10 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import co.ke.snilloc.covid_19tracking.R;
-import co.ke.snilloc.covid_19tracking.adapter.TrackerAdapter;
-import co.ke.snilloc.covid_19tracking.models.Tracker;
-import co.ke.snilloc.covid_19tracking.network.CovidTrackerClient;
+import com.boitdroid.covid19.R;
+import com.boitdroid.covid19.adapter.TrackerAdapter;
+import com.boitdroid.covid19.models.Tracker;
+import com.boitdroid.covid19.network.CovidTrackerClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
