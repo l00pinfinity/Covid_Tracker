@@ -14,8 +14,8 @@ public class CovidTrackerClient {
             OkHttpClient okHttpClient = new OkHttpClient.Builder()
                     .addInterceptor(chain -> {
                         Request request = chain.request().newBuilder()
-                                .addHeader("x-rapidapi-key", Constants.COVID_TRACKER_API_KEY)
-                                .addHeader("x-rapidapi-host","covid-19-tracking.p.rapidapi.com")
+                                .addHeader("X-RapidAPI-Key", Constants.COVID_TRACKER_API_KEY)
+                                .addHeader("X-RapidAPI-Host","covid-19-tracking.p.rapidapi.com")
                                 .build();
                         return chain.proceed(request);
                     })
